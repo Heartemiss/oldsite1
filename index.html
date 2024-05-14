@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+
+        <script src="js/main.js" async defer></script>
+
+        <link href="https://fonts.googleapis.com/css2?family=Vollkorn&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body onload="initPage()">
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div id="wrapper">
+            <div id="left">
+                <div id="info">
+                    <p id="worshipAmount">Worship: 0</p>
+                    <p id="bloodAmount">Blood: 0/100</p>
+                    <p id="powerAmount">Power: 0/100</p>
+                    <br>
+                    <p>Followers: 0</p>
+                    <p>Sacrifices: 0</p>
+                </div>
+                <div id="leftActions">
+                    <button onclick="addWorship()">Pray</button>
+                    <button onclick="addBlood()">Add Blood</button>
+                    <button onclick="resetBlood()">Reset Blood</button>
+                    <button onclick="pause()">Pause</button>
+                    <button onclick="buy('temple')">Buy Temple</button>
+                </div>
+            </div>
+            <div id="center">
+                <div class="tabs">
+                    <button id="starTab" class="tablinks" onclick="openTab('starTab', 'star')">Star</button>
+                    <button id="faqTab" class="tablinks" onclick="openTab('faqTab', 'faq')">FAQ</button>
+                </div>
+                <div id="centerContent">
+                    <div id="star" class="tabcontent"></div>
+                    <div id="faq" class="tabcontent">b</div>
+                </div>
+                <div id="centerActions"></div>
+            </div>
+            <div id="right">
+                <div class="tabs">
+                    <button id="starTab" class="tablinks" onclick="openTab('starTab', 'star')">Book of the Dead</button>
+                    <button id="starTab" class="tablinks" onclick="openTab('starTab', 'star')">Upgrades</button>
+                </div>
+                <div id="rightContent">
+                    <div id="book" class="noselect"></div>
+                </div>
+                <div id="rightActions">
+                    <button class="clickable fullwidth action" onclick="ponder()">Ponder</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

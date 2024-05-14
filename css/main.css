@@ -1,0 +1,161 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(27, 24, 27);
+    color: white;
+    font-family: 'Vollkorn', serif;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+
+button {
+    font-family: 'Vollkorn', serif;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    filter: drop-shadow(0px 0px 20px rgba(255, 0, 64, 1));
+}
+
+#wrapper {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 15% auto 30%;
+    grid-template-rows: auto;
+}
+
+#left, #center, #right {
+    padding: 20px;
+    display: grid;
+}
+
+#center, #right {
+    grid-template-rows: 40px auto 20%;
+    row-gap: 2%;
+}
+
+#centerContent {
+    background-image: url(img/pentagram.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: glow-animation 5s infinite;
+}
+
+#rightContent {
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#rightContent::-webkit-scrollbar {
+    display: none;
+}
+
+#star {
+    mask-image: url(img/pentagram.png);
+    height: 100%;
+    mask-position: center;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    animation: blood-animation 5s infinite;
+}
+
+@keyframes glow-animation {
+    0% {
+        filter: drop-shadow(0px 0px 10px rgb(170, 66, 255, 0.2));
+    }
+    50% {
+        filter: drop-shadow(0px 0px 20px rgba(255, 0, 64, 1));
+    }
+    100% {
+        filter: drop-shadow(0px 0px 10px rgba(170, 66, 255, 0.2));
+    }
+}
+
+@keyframes blood-animation {
+    0% {
+        filter: brightness(0.5);
+    }
+    50% {
+        filter: brightness(1);
+    }
+    100% {
+        filter: brightness(0.5);
+    }
+}
+
+#book {
+    text-align: justify;
+}
+
+.powerWord {
+    color: rgb(255, 70, 116);
+    animation: glow-animation 5s infinite;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.powerWord:hover {
+    color: rgb(255, 255, 255);
+}
+
+.tabs {
+    border: 1px solid white;
+    overflow: hidden;
+}
+
+.tabcontent {
+    animation: fadeEffect 1.5s;
+}
+
+.tablinks {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    height: 100%;
+    padding-right: 10px;
+    padding-left: 10px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+.tablinks:hover {
+    color: rgb(255, 70, 116);
+}
+
+.active {
+    color: rgb(255, 70, 116);
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.fullwidth {
+    width: 100%;
+}
+
+.action {
+    background-color: rgb(255, 70, 116);
+    text-align: center;
+    height: 40px;
+}
+
+.hide {
+    display: none;
+}
