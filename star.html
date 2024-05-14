@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/star.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <a href="index.html">Home</a>
+        <div class="wrapper">
+            <div class="container">
+                <div>
+                    <div id="star"></div>
+                    <div id="bar"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="noselect" id="text"></div>
+            </div>
+        </div>
+        <button onclick="addBlood()">Add Blood</button>
+        <button onclick="resetBlood()">Reset Blood</button>
+        <p id="bloodAmount">Blood: 0 (0%)</p>
+        <p id="powerAmount">Power: 0</p>
+        <button onclick="pause()">Pause</button>
+        <script src="js/star.js" async defer></script>
+    </body>
+</html>

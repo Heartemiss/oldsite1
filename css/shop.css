@@ -1,0 +1,24 @@
+
+.wrapper {
+    display: flex;
+}
+
+#loot, #bag {
+    width: 30%;
+    height: 500px;
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item {
+    height: 100px;
+    width: 100px;
+    background-color: grey;
+    display: flex;
+}
+
+.item:hover {
+    background-color: rgb(75, 75, 75);
+    cursor: pointer;
+}
